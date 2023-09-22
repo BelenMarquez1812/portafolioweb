@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">      
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/css-doodle@0.34.9/css-doodle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wire+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&family=Wire+One&display=swap" rel="stylesheet">
+
+    <script src="anijs-min.js"></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+    <!--Doodle-CSS-->
+
+    <css-doodle> 
+        :doodle {
+            @grid: 1x3 / 200vmax;
+        position: absolute;
+        top: 0; left: 0;
+        z-index: 0;
+        }
+
+        @size: 100% 150%;
+        position: absolute;
+    
+        background: @m(100, (
+            linear-gradient(transparent, @p(
+        #FFFDE1@repeat(2, @p([0-9a-f])), 
+        #FB3569@repeat(2, @p([0-9a-f])) 
+        ))
+            @r(0%, 100%) @r(0%, 100%) /
+            @r(1px) @r(23vmin)
+            no-repeat
+        ));
+
+        will-change: transform;
+        animation: f 20s linear calc(-20s / @size() * @i()) infinite;
+        @keyframes f {
+            from { transform: translateY(-100%) }
+            to { transform: translateY(100%) }
+        }
+    </css-doodle>
+
+    <!--Fin de Doodle-CSS-->
+
+    <article>
+    <h1>Welcome to my portfolio</h1>
+
+
+    <!--Tarjetas-->
+        <div class="wrap">
+
+            <!--Tarjeta n°1-->
+                <div class="wrap__card">
+                    <div class="card">
+                        <img src="About me logo.png" alt="">
+                        <div class="card__front card1"></div>
+                        <div class="card__back">
+                            <img src="/Imagenes/carta reverso v3.png" alt="">
+                            <div class="card__back__cuerpo">
+                                <h4>Information</h4>
+                                <img src="/Imagenes/about.svg" alt="">
+                                <h3>Developer</h3>
+                                <p>
+                                    My name is Belen, I'm a freelance web designer. This section was created to introduce myself and let you know more about me.</p>
+                        
+                                <!--Boton de la ventana modal-->
+                                    <button id="abrirModal1" class="card__back__cuerpo__button">+</button>
+                                <!--Fin de boton-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--Fin tarjeta n°1-->
+
+            <!--Tarjeta n°2-->
+                <div class="wrap__card">
+                    <div class="card">
+                        <img src="work logo.png" alt="">
+                        <div class="card__front card2"></div>
+                        <div class="card__back">
+                            <img src="/Imagenes/carta reverso v3.png" alt="">
+                            <div class="card__back__cuerpo">
+                            
+                                <h4>Work</h4>
+                                <img src="/Imagenes/work.svg" alt="">
+                                <h3>Web design</h3>
+                                <p>Some of my work can be found in this section. The designs are presented from the most recent to the oldest.</p>
+                        
+                                <!--Boton de la ventana modal-->
+                                    <button id="abrirModal2" class="card__back__cuerpo__button">+</button>
+                                <!--Fin de boton-->
+                            </div>      
+                        </div>
+                    </div>
+                </div>
+            <!--Fin tarjeta n°2-->
+
+            <!--Tarjeta n°3-->
+                <div class="wrap__card">
+                    <div class="card">
+                        <img src="prueba.png" alt="">
+                        <div class="card__front card3"></div>
+                        <div class="card__back">
+                            <img src="/Imagenes/carta reverso v3.png" alt="">
+                            <div class="card__back__cuerpo">
+                                
+                                <h4>Contact</h4>
+                                <img src="/Imagenes/redes.svg" alt="">
+                                <h3>Socials</h3>
+                                <div class="iconos__contact">
+                                    <a href="https://github.com/BelenMarquez1812" target="_blank"> <img id="iconosredes" src="iconos/bxl-github.svg"> </a>
+                                    <a href="https://www.linkedin.com/in/belen-marquez-programacion/" target="_blank"> <img id="iconosredes" src="iconos/bxl-linkedin.svg"> </a>
+                                    <a href="https://www.instagram.com/beluwebdesigner/" target="_blank"> <img id="iconosredes" src="iconos/bxl-instagram-alt.svg"> </a>
+                                    <a href="https://www.behance.net/beluwebdesigner" target="_blank"> <img id="iconosredes" src="iconos/bxl-behance.svg"> </a>
+                                </div>
+            
+                                <!--Boton de la ventana modal-->
+                                    <button id="abrirModal3" class="card__back__cuerpo__button">+</button>
+                                <!--Fin de boton-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--Tarjeta n°3-->
+        </div>
+    <!--Fin de Tarjetas-->
+
+    <!--Ventana 1-->
+
+    
+    <div  id="modal1" class="modal" >
+        <div class="modal__contenido">
+            <span class="modal__contenido__cerrar" id="cerrarModal1">&times;</span>
+            <div class="ventana__modal__seccion1">
+                <h2>About me</h2>
+                <div class="ventana_modal__seccion1__derecha">
+                    <img id="imagen__perfil" src="logo mariposa.png" alt="">
+                    <p>
+                        Welcome, I'm Belén, a web designer who ventured into this field out of a simple interest. As I continued to learn and grow, this interest evolved into a personal goal: crafting exceptional digital experiences for various types of businesses. Personally, I have a penchant for creating simple and elegant websites with an effective design. My work involves transforming concepts into beautiful and functional sites that mirror the identity of each business. I'm thrilled to collaborate with clients, bring their visions to life, and elevate their brands to the next level.
+                    </p>
+                </div>
+            </div>
+            <div class="ventana__modal__seccion2">
+                <div class="ventana__modal__seccion2__iconos">
+                    <h3>Skills</h3>
+                    <div class="ventana_modal_seccion2__iconos__lista">
+                        <img src="iconos/icons8-html-50.png" alt="HTML">
+                        <img src="iconos/icons8-css-50.png" alt="CSS">
+                        <img src="iconos/icons8-javascript-50.png" alt="javascript">
+                        <img src="iconos/icons8-php-50.png" alt="PHP">
+                        <img src="iconos/icons8-angularjs-50.png" alt="Angular">
+                        <img src="iconos/icons8-oreja-50.png" alt="">
+                        <img src="iconos/icons8-photoshop-50.png" alt="Photoshop">
+                        <img src="iconos/icons8-adobe-illustrator-50.png" alt="Ilustrator">
+                        <img src="iconos/icons8-figma-50.png" alt="Figma">
+                        <img src="iconos/icons8-adobe-xd-50.png" alt="XD">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin de la ventanas Modals-->
+    <!--Ventana 2-->
+    <div id="modal2" class="modal">
+        <div class="modal__contenido">
+            
+            <span class="modal__contenido__cerrar" id="cerrarModal2">&times;</span>
+
+            <div class="ventana__modal__seccion1">
+
+                <div class="ventana_modal__seccion1__contenido" >
+                    <h2>Web design</h2>
+                    <div class="ventana__modal__grilla" id="diseno-web">
+                        <div class="grid__container">
+                           
+                            <div class="grid__container__item">
+                                <img src="https://i.ibb.co/hHR4Y6H/Encriptador.png" alt="Imagen 1">
+                                <div class="enlaces">
+                                  <a href="https://belenmarquez1812.github.io/encriptador/" target="_blank" class="project">Web</a>
+                                  <a href="https://github.com/BelenMarquez1812/encriptador" target="_blank" class="project">Code</a>
+                                </div>
+                            </div>
+                            <div class="grid__container__item">
+                              <img src="https://i.ibb.co/SwZL4Cq/Neuro-Detroy-1.png" alt="Imagen 1">
+                              <div class="enlaces">
+                                <a class="asd" href="https://belenmarquez1812.github.io/NeuroDetroy/" target="_blank" class="project">Web</a>
+                                <a href="https://github.com/BelenMarquez1812/NeuroDetroy" target="_blank" class="project">Code</a>
+                            </div>
+                            </div>
+                            <div class="grid__container__item">
+                                <img src="https://i.ibb.co/dkcLy13/portafolio.png" alt="Imagen 1">
+                                <div class="enlaces">
+                                  <a href="https://belenmarquez1812.github.io/Portafolio/" target="_blank" class="project">Web</a>
+                                  <a href="https://github.com/BelenMarquez1812/Portafolio" target="_blank" class="project">Code</a>
+                                </div>
+                            </div>
+                            <div class="grid__container__item">
+                                <img src="https://i.ibb.co/DrJTdYQ/pr.png" alt="codoacodo2">
+                                <div class="enlaces">
+                                    <a href="https://belenmarquez1812.github.io/proyectoJS/Trabajo.html" target="_blank" class="project">Web </a>
+                                    <a href="https://github.com/BelenMarquez1812/proyectoJS" target="_blank" class="project">Code</a>
+                                </div>
+                            </div>
+                            <div class="grid__container__item">
+                                <img src="https://i.ibb.co/GTKsw4D/codoacodo.png" alt="codoacodo1">
+                                <div class="enlaces">
+                                  <a href="https://belenmarquez1812.github.io/practicoCodoaCodo/Trabajo.html" target="_blank" class="project">Web </a>
+                                  <a href="https://github.com/BelenMarquez1812/practicoCodoaCodo" target="_blank" class="project">Code</a>
+                                </div>
+                            </div>
+                            <div class="grid__container__item">
+                                <img src="https://i.ibb.co/Wy171nj/enviodeproducto.png" alt="enviodeProducto">
+                                <div class="enlaces">
+                                    <a href="https://belenmarquez1812.github.io/envioDeProducto/" target="_blank" class="project">Web</a>
+                                    <a href="ruta2.html" target="_blank" class="project">Code</a>
+                                </div>
+                            </div>
+                            <div class="grid__container__item">
+                                <img src="https://i.ibb.co/GRPb6sY/documentacion.png" alt="paginadeDocumentacion">
+                                <div class="enlaces">
+                                    <a href="https://belenmarquez1812.github.io/paginaDeDocumentacion/" target="_blank" class="project">Web </a>
+                                    <a href="https://github.com/BelenMarquez1812/paginaDeDocumentacion" target="_blank" class="project">Code</a>
+                                </div>
+                            </div>
+                            <div class="grid__container__item">
+                                <img src="https://i.ibb.co/yg5Qd7F/formulario.png" alt="formularioDnD">
+                                <div class="enlaces">
+                                    <a href="https://belenmarquez1812.github.io/FormularioDnD/" target="_blank" class="project">Web</a>
+                                  <a href="https://github.com/BelenMarquez1812/FormularioDnD" target="_blank" class="project">Code</a>
+                                </div>
+                            </div>
+                            <div class="grid__container__item">
+                                <img src="https://i.ibb.co/18sNzby/tributo.png" alt="paginadeTributo">
+                                <div class="enlaces">
+                                    <a href="https://belenmarquez1812.github.io/tributo/" target="_blank" class="project">Web</a>
+                                  <a href="https://github.com/BelenMarquez1812/tributo" target="_blank" class="project">Code</a>
+                                </div>
+                            </div>
+                            <!-- Agrega más imágenes y títulos aquí -->
+                          </div>
+                          
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin de la ventanas Modals-->
+
+
+    <!--Ventana modal 3-->
+
+    <div id="modal3" class="modal" >
+        <div class="modal__contenido">
+            <span class="modal__contenido__cerrar" id="cerrarModal3">&times;</span>
+            <div class="cuerpo__ventana">
+                <h2>Contact</h2>
+                <div class="cuerpo__ventana__iconos">
+                    <p>Should you wish to get in touch with me, please fill out the form!</p>
+                    <form action="https://formsubmit.co/belenmarquez1812@gmail.com" method="POST">
+                        
+                        <input type="text" id="nombre" name="name" placeholder="Enter your name">
+                
+                       
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                
+
+                        <input type="text" id="asunto" name="subject" placeholder="Enter your subject">
+                
+                        <textarea id="mensaje" name="coments" rows="4" placeholder="Enter your message"></textarea>
+                
+                        <button type="submit">Send message</button>
+
+                        <input type="hidden" name="_next" value="DIRECCION DE MI PAGINA" >
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin de la ventanas Modals-->
+
+</article>
+    <script src="proyectjs.js"></script>
+</body>
+</html>
